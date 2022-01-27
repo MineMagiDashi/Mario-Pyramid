@@ -1,29 +1,26 @@
 let userinputHeight = prompt("Pick a height for the console pyramid: ");
 printPyramid(userinputHeight);
-// TODO #2
-// Take in user input for the height
 
 
-/*
- * printPyramid
- *
- * Prints to the console a pyramid of '#' characters of the specified height
- * For example, if height is 5, the console will look like this:
- *          ##
- *         ###
- *        ####
- *       #####
- *      ######
- */
+
 function printPyramid(height) {
   for (let i = 0; i < height; i++) {
-    let lineOfHashes = "";
+    let rowStr = "";
     for (let o = 0; o < height - i; o++) {
-      lineOfHashes = lineOfHashes + " ";
+      rowStr = rowStr + ".";
     }
     for (let o = 0; o < i + 1; o++) {
-      lineOfHashes = lineOfHashes + "#";
+      rowStr = rowStr + "#";
     }
-    console.log(lineOfHashes);
+    console.log(rowStr);
+    const para = document.createElement("p");
+    const node = document.createTextNode(rowStr);
+    para.appendChild(node);
+    const element = document.getElementById("pyramid");
+    element.appendChild(para);
   }
 }
+
+// TODO 1
+  // create an element whose inner text is rowStr,
+  // and insert it as a child of the container <div id="pyramid">
