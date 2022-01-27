@@ -16,15 +16,12 @@ printPyramid(userinputHeight);
  *      ######
  */
 function printPyramid(height) {
-  for (let i = 0; i < height; i++)
-  {
+  for (let i = 0; i < height; i++) {
     let lineOfHashes = "";
-    for (let o = 0; o < height-i; o++)
-    {
+    for (let o = 0; o < height - i; o++) {
       lineOfHashes = lineOfHashes + " ";
     }
-    for (let o = 0; o < i+1; o++)
-    {
+    for (let o = 0; o < i + 1; o++) {
       lineOfHashes = lineOfHashes + "#";
     }
     console.log(lineOfHashes);
